@@ -38,18 +38,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     );
 
     return (
-        <section className="embla">
+        <section className="embla outline outline-blue-400">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((index) => (
                         <div className="embla__slide" key={index}>
-                            <div className="embla__slide__number">{index + 1}</div>
+                            <div className="embla__slide__number">{index}</div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="embla__controls">
+            <div className="embla__controls outline outline-red-400">
                 <div className="embla__buttons">
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                     <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
