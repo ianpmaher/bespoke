@@ -23,15 +23,14 @@ const Product = () => {
     }, []);
 
     return (
-        <div>
+        <div className="">
             {Object.keys(albums).map((albumId) => (
-                <div key={albumId}>
+                <div className="flex mx-auto my-0" key={albumId}>
                     <h2>Album ID: {albumId}</h2>
-                    <div>
+                    <div className="flex overflow-x-scroll">
                         {albums[parseInt(albumId)].map((photo) => (
                             <div key={photo.id}>
-                                {/* <Image src={photo.thumbnailUrl} alt={photo.title} width={100} height={100} /> */}
-                                <img src={photo.thumbnailUrl} alt={photo.title} width={100} height={100} />
+                                <Image src={photo.thumbnailUrl} alt={photo.title} width={100} height={100} />
                                 <p>{photo.title}</p>
                             </div>
                         ))}
