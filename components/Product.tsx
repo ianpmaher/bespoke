@@ -26,7 +26,7 @@ const Product = () => {
         <div className="">
             {Object.keys(albums).map((albumId) => (
                 <div className="flex mx-auto my-0" key={albumId}>
-                    <h2>Album ID: {albumId}</h2>
+                    {/* <h2>{albumId}</h2> */}
                     <div className="flex overflow-x-scroll">
                         {albums[parseInt(albumId)].map((photo) => (
                             <div key={photo.id}>
