@@ -1,21 +1,40 @@
 "use client";
 
-import { Tab } from "@headlessui/react";
+import { useState, useEffect } from "react";
+import { useAnimate, stagger, motion } from "framer-motion";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 function Nav() {
     return (
-        <Tab.Group>
-            <Tab.List className="flex text-xl mx-auto my-0 gap-4 justify-center">
-                <Tab className=" outline outline-slate-400 hover:rounded-lg">Tab 1 Products</Tab>
-                <Tab className=" outline outline-slate-400 hover:rounded-lg">Tab 2 About Us</Tab>
-                <Tab className=" outline outline-slate-400 hover:rounded-lg">Tab 3 Threads</Tab>
-            </Tab.List>
-            <Tab.Panels className="p-4">
-                <Tab.Panel>Panel 1</Tab.Panel>
-                <Tab.Panel>Panel 2</Tab.Panel>
-                <Tab.Panel>Panel 3</Tab.Panel>
-            </Tab.Panels>
-        </Tab.Group>
+        <Menu>
+            <MenuButton>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+            </MenuButton>
+            <MenuItems anchor="bottom" className="flex text-xl mx-auto my-0 gap-4 justify-center">
+                <MenuItem>
+                    <p className="block data-[focus]:bg-blue-100">Tab 1 Products</p>
+                </MenuItem>
+                <MenuItem>
+                    <p className="block data-[focus]:bg-blue-100">Tab 2 About Us</p>
+                </MenuItem>
+                <MenuItem>
+                    <p className="block data-[focus]:bg-blue-100">Tab 3 Threads</p>
+                </MenuItem>
+            </MenuItems>
+        </Menu>
     );
 }
 export default Nav;
