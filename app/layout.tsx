@@ -18,8 +18,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="styled-pattern scroll-smooth">
-                    <main className="max-w-[90vw] my-0 mx-auto bg-zinc-800">
+                <div className="styled-pattern bg-fixed scroll-smooth ">
+                    <main className="max-w-[80vw] my-0 mx-auto bg-zinc-800">
                         <section className="p-4 mb-4 flex justify-center">
                             <Header />
                         </section>

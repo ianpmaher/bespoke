@@ -2,7 +2,7 @@ import Product from "./Product";
 
 const ContentContainer = () => {
     return (
-        <div className="bg-white">
+        <div className="">
             <Product />
         </div>
     );
