@@ -18,10 +18,15 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="bg-blue-400 bg-opacity-60 scroll-smooth">
-                        <Header />
-                    <main className="">
-                        {children}
+                <div className="styled-pattern scroll-smooth">
+                    <main className="max-w-[90vw] my-0 mx-auto bg-zinc-800">
+                        <section className="p-4 mb-4 flex justify-center">
+                            <Header />
+                        </section>
+                        <div className="flex-1 flex flex-col sm:flex-row ">
+                            <main className="flex-1">{children}</main>
+                            {/* footer */}
+                        </div>
                     </main>
                 </div>
             </body>

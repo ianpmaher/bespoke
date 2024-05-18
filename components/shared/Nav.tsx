@@ -23,15 +23,15 @@ function Nav() {
                     />
                 </svg>
             </MenuButton>
-            <MenuItems anchor="bottom" className="flex text-xl mx-auto my-0 gap-4 justify-center">
+            <MenuItems anchor="bottom" className="flex text-xl mx-auto my-0 gap-4 justify-center text-white">
                 <MenuItem>
-                    <p className="block data-[focus]:bg-blue-100">Tab 1 Products</p>
+                    <p className="block data-[focus]:underline">Tab 1 Products</p>
                 </MenuItem>
                 <MenuItem>
-                    <p className="block data-[focus]:bg-blue-100">Tab 2 About Us</p>
+                    <p className="block data-[focus]:underline">Tab 2 About Us</p>
                 </MenuItem>
                 <MenuItem>
-                    <p className="block data-[focus]:bg-blue-100">Tab 3 Threads</p>
+                    <p className="block data-[focus]:underline">Tab 3 Threads</p>
                 </MenuItem>
             </MenuItems>
         </Menu>
