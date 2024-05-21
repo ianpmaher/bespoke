@@ -11,6 +11,7 @@ const config: Config = {
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+                "sailing-lady": "url('https://images.pexels.com/photos/5046517/pexels-photo-5046517.jpeg')",
             },
             colors: {
                 custom8008: {

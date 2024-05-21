@@ -23,7 +23,7 @@ function Nav() {
                     />
                 </svg>
             </MenuButton>
-            <MenuItems anchor="bottom" className="flex text-xl mx-auto my-0 gap-4 justify-center text-white">
+            <MenuItems anchor="bottom" className="flex flex-col text-md md:text-md mx-auto my-0 gap-2 justify-center overflow-clip whitespace-break-spaces">
                 <MenuItem>
                     <p className="block data-[focus]:underline">Tab 1 Products</p>
                 </MenuItem>

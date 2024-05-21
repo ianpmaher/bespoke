@@ -30,7 +30,7 @@ const Product = () => {
                     {/* <h2>{albumId}</h2> */}
                     <div className="grid grid-cols-4 gap-2 justify-items-center content-center place-content-evenly p-0 ">
                         {albums[parseInt(albumId)].map((photo) => (
-                            <div key={photo.id} className="max-w-96 flex flex-col justify-center items-center hover:z-50 z-10 shadow-lg bg-white w-1/2 rounded-sm p-2">
+                            <div key={photo.id} className="max-w-96 flex flex-col justify-center items-center hover:z-50 z-10 shadow-lg bg-white w-1/2 rounded-sm p-2 object-contain">
                                 <Image src={photo.thumbnailUrl} alt={photo.title} width={150} height={150} loading="lazy" />
                                 <p className="text-xs">{photo.title}</p>
                             </div>
