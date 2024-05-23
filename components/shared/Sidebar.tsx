@@ -26,14 +26,15 @@ export default function Sidebar() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 1000);
+        }, 15000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <section className="">
-            <div className="flex gap-8">
+        <section className="fixed">
+            <div className="flex gap-8 flex-wrap flex-col">
+                <p className="text-center">Your ad here!</p>
                 <Image
                     key={currentImageIndex}
                     src={images[currentImageIndex]}

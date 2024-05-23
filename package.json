@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.0.3",
     "@radix-ui/react-hover-card": "^1.0.7",
     "framer-motion": "^11.2.4",
+    "framer-motion-ticker": "^1.0.19",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"

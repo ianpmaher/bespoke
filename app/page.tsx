@@ -2,6 +2,7 @@ import ContentContainer from "@/components/ContentContainer";
 import Hero from "@/components/Hero";
 import Product from "@/components/Product";
 import Image from "next/image";
+import ScrollYDiv from "@/components/ScrollDiv";
 
 export default function Home() {
     return (
@@ -12,6 +13,9 @@ export default function Home() {
             <article>
                 <ContentContainer />
             </article>
+            <div>
+                <ScrollYDiv className="fixed" />
+            </div>
         </main>
     );
 }

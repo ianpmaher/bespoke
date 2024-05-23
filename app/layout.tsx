@@ -21,12 +21,12 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className="styled-pattern bg-fixed scroll-smooth ">
-                    <main className="max-w-[100vw] my-0 mx-auto bg-">
+                    <main id="mainmain" className="max-w-[100vw] my-0 mx-auto bg-">
                         <section className="py-2 mb-2 flex justify-center">
                             <Header />
                         </section>
                         <div className="flex-1 flex flex-col sm:flex-row ">
-                            <div className="flex-1 bg-blue-400 ">{children}</div>
+                            <div className="flex-1 ">{children}</div>
                             <nav className="order-first w-1/12 bg-white">
                                 <Nav />
                             </nav>
