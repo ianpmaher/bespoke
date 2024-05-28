@@ -22,7 +22,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <div className="styled-pattern bg-fixed scroll-smooth ">
                     <main id="mainmain" className="max-w-[100vw] my-0 mx-auto bg-">
-                        <section className="py-2 mb-2 flex justify-center">
+                        <section className="pb-2 mb-2 flex justify-center">
                             <Header />
                         </section>
                         <div className="flex-1 flex flex-col sm:flex-row ">
