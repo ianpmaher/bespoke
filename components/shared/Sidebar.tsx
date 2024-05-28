@@ -9,6 +9,8 @@ export default function Sidebar() {
     
     const images = [
         "https://picsum.photos/200/300",
+        "https://picsum.photos/300/400",
+        "https://picsum.photos/290/350",
         "https://picsum.photos/250/300",
         "https://picsum.photos/190/300",
         "https://picsum.photos/200/250",
@@ -26,7 +28,7 @@ export default function Sidebar() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 15000);
+        }, 1000);
 
         return () => clearInterval(interval);
     }, []);
@@ -38,11 +40,12 @@ export default function Sidebar() {
                 <Image
                     key={currentImageIndex}
                     src={images[currentImageIndex]}
-                    alt="hero image"
+                    alt="ad placeholder"
                     width={200}
                     height={300}
                     className="rounded-xl object-fill"
                 />
+                
             </div>
         </section>
     );

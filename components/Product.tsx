@@ -24,15 +24,15 @@ const Product = () => {
     }, []);
 
     return (
-        <div className="">
+        <div className="text-center ">
             {Object.keys(albums).map((albumId) => (
                 <div className="flex justify-center mx-auto my-0" key={albumId}>
                     {/* <h2>{albumId}</h2> */}
-                    <div className="grid grid-cols-4 gap-2 justify-items-center content-center place-content-evenly p-0 ">
+                    <div className="grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-2 justify-items-center content-center place-content-evenly p-0 ">
                         {albums[parseInt(albumId)].map((photo) => (
-                            <div key={photo.id} className="max-w-96 flex flex-col justify-center items-center hover:z-50 z-10 shadow-lg bg-white w-1/2 rounded-sm p-2 object-contain">
+                            <div key={photo.id} className="max-w-96 flex flex-col justify-start items-center hover:z-50 z-10 shadow-lg bg-custom8008-sub-color bg-opacity-100 w-1/2 rounded-sm p-1 object-contain">
                                 <Image src={photo.thumbnailUrl} alt={photo.title} width={150} height={150} loading="lazy" />
-                                <p className="text-xs">{photo.title}</p>
+                                <p className="text-xs text-pretty md:text-md">{photo.title}</p>
                             </div>
                         ))}
                     </div>

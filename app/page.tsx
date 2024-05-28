@@ -7,7 +7,7 @@ import ScrollYDiv from "@/components/ScrollDiv";
 export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center gap-2 ">
-            <article className="">
+            <article className="h-screen">
                 <Hero />
             </article>
             <article>
