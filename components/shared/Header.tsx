@@ -2,6 +2,7 @@ import Image from "next/image";
 import Product from "../Product";
 import Nav from "./Nav";
 import SteamyBread from "../svg/SteamyBread";
+import Contacts from "../Contacts";
 
 function Header() {
     return (
@@ -13,7 +14,7 @@ function Header() {
                     <SteamyBread />
                 </div>
             </div>
-            {/* <Nav /> */}
+            <Contacts />
         </header>
     );
 }

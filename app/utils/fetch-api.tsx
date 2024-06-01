@@ -18,7 +18,7 @@ const fetchJsonPlaceholderData = async () => {
 
     // fetch only 50 photos
 
-    const data: Photo[] = (await response.json()).slice(0,50) as Photo[]; // Type assertion to Photo[] type
+    const data: Photo[] = (await response.json()).slice(0,5) as Photo[]; // Type assertion to Photo[] type
 
     const albums = data.reduce((acc, photo) => {
         if (!acc[photo.albumId]) {
