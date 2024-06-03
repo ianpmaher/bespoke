@@ -1,7 +1,6 @@
 // hero component for the home page
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Hero() {
@@ -19,10 +18,7 @@ export default function Hero() {
         visible: { opacity: 1, x: 0 },
     };
 
-    const [hidden, setHidden] = useState(true);
-
     return (
-        // <section className="bg-sailing-lady bg-cover bg-center bg-fixed w-[85vw] bg-no-repeat h-screen">
         <section className="flex flex-col gap- ">
             <div className="flex flex-row gap-2">
                 <motion.section
@@ -32,21 +28,21 @@ export default function Hero() {
                     transition={{ duration: 2, ease: "easeInOut" }}
                     className="w-full h-full"
                 >
-                    <Image
-                        src={
-                            "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        }
-                        width={400}
-                        height={400}
-                        alt="dough"
-                        priority
-                        className="rounded-xl"
-                    />
-                    {hidden && (
-                        
-                        <span className="">made fresh every day</span> 
-                    )
-                    }
+                    <div className="relative">
+                        <Image
+                            src={
+                                "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            }
+                            width={400}
+                            height={400}
+                            alt="dough"
+                            priority
+                            className="rounded-xl"
+                        />
+                        <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
+                            made fresh every day
+                        </div>
+                    </div>
                 </motion.section>
                 <motion.section
                     variants={variants}
@@ -55,17 +51,21 @@ export default function Hero() {
                     transition={{ duration: 2, ease: "easeInOut" }}
                     className="w-full h-full"
                 >
-                    <Image
-                        src={
-                            "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        }
-                        width={400}
-                        height={400}
-                        alt="flour bread"
-                        priority
-                        className="rounded-xl"
-                    />
-                    <span>artisanal grains</span>
+                    <div className="relative">
+                        <Image
+                            src={
+                                "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            }
+                            width={400}
+                            height={400}
+                            alt="flour bread"
+                            priority
+                            className="rounded-xl"
+                        />
+                        <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
+                            artisanal grains
+                        </div>
+                    </div>
                 </motion.section>
             </div>
             <section className="bg-custom8008-caret-color w-1/2 rounded-xl mx-auto text-black">
