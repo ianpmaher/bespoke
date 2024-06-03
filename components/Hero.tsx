@@ -1,7 +1,8 @@
 // hero component for the home page
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Hero() {
     // framer motion variants
@@ -10,9 +11,19 @@ export default function Hero() {
         visible: { opacity: 1, scale: 1 },
     };
 
+    const text1 = "your favorite Newport bakery";
+    const text2 = "for locals, by locals";
+
+    const gradual = {
+        hidden: { opacity: 0, x: -20 },
+        visible: { opacity: 1, x: 0 },
+    };
+
+    const [hidden, setHidden] = useState(true);
+
     return (
         // <section className="bg-sailing-lady bg-cover bg-center bg-fixed w-[85vw] bg-no-repeat h-screen">
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap- ">
             <div className="flex flex-row gap-2">
                 <motion.section
                     variants={variants}
@@ -31,7 +42,11 @@ export default function Hero() {
                         priority
                         className="rounded-xl"
                     />
-                    <span>made fresh every day</span>
+                    {hidden && (
+                        
+                        <span className="">made fresh every day</span> 
+                    )
+                    }
                 </motion.section>
                 <motion.section
                     variants={variants}
@@ -53,17 +68,69 @@ export default function Hero() {
                     <span>artisanal grains</span>
                 </motion.section>
             </div>
-            <motion.section
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
-                className=" bg-custom8008-bg-color flex text-center justify-center items-center w-full h-32"
-            >
-                <div className="">
-                    <span className="text-xl">your favorite Newport bakery, <br />for locals, by locals</span>
+            <section className="bg-custom8008-caret-color w-1/2 rounded-xl mx-auto text-black">
+                <div className="flex flex-row text-justify items-center justify-center">
+                    <AnimatePresence>
+                        {text1.split("").map((char, i) => (
+                            <motion.h1
+                                key={i}
+                                initial="hidden"
+                                animate="visible"
+                                exit="hidden"
+                                variants={gradual}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                className="text-center font-display text-md font-bold tracking-[-0.02em] drop-shadow-sm md:text-md md:leading-[5rem]"
+                            >
+                                {char === " " ? <span>&nbsp;</span> : char}
+                            </motion.h1>
+                        ))}
+                    </AnimatePresence>
                 </div>
-            </motion.section>
+                <div className="flex flex-row text-justify items-center justify-center">
+                    <AnimatePresence>
+                        {text2.split("").map((char, i) => (
+                            <motion.h1
+                                key={i}
+                                initial="hidden"
+                                animate="visible"
+                                exit="hidden"
+                                variants={gradual}
+                                transition={{ duration: 0.5, delay: i * 0.15 }}
+                                className="text-center font-display text-md font-bold tracking-[-0.02em] drop-shadow-sm md:text-md md:leading-[5rem]"
+                            >
+                                {char === " " ? <span>&nbsp;</span> : char}
+                            </motion.h1>
+                        ))}
+                    </AnimatePresence>
+                </div>
+            </section>
         </section>
     );
 }
+
+// export function GradualSpacing() {
+//     const text = "Gradual Spacing";
+//     const gradual = {
+//         hidden: { opacity: 0, x: -20 },
+//         visible: { opacity: 1, x: 0 },
+//     };
+//     return (
+//         <div className="flex space-x-1 justify-center">
+//             <AnimatePresence>
+//                 {text.split("").map((char, i) => (
+//                     <motion.h1
+//                         key={i}
+//                         initial="hidden"
+//                         animate="visible"
+//                         exit="hidden"
+//                         variants={gradual}
+//                         transition={{ duration: 0.5, delay: i * 0.1 }}
+//                         className="text-center font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
+//                     >
+//                         {char === " " ? <span>&nbsp;</span> : char}
+//                     </motion.h1>
+//                 ))}
+//             </AnimatePresence>
+//         </div>
+//     );
+// }
