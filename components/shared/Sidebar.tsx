@@ -5,8 +5,6 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Sidebar() {
-
-    
     const images = [
         "https://picsum.photos/200/300",
         "https://picsum.photos/300/400",
@@ -31,23 +29,23 @@ export default function Sidebar() {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [images.length]);
 
     return (
         <section className="fixed">
-            <div className="flex gap-8 flex-wrap flex-col">
+            <div className="flex gap-2 flex-wrap flex-col">
                 <p className="text-center">Your ad here!</p>
-                <Image
-                    key={currentImageIndex}
-                    src={images[currentImageIndex]}
-                    alt="ad placeholder"
-                    width={200}
-                    height={300}
-                    className="rounded-xl object-fill"
-                />
-                
+                <div className="w-[95%] h-fit mx-auto">
+                    <Image
+                        key={currentImageIndex}
+                        src={images[currentImageIndex]}
+                        alt="ad placeholder"
+                        width={200}
+                        height={300}
+                        className="rounded-xl object-fill"
+                    />
+                </div>
             </div>
         </section>
     );
-
 }

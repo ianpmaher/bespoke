@@ -19,7 +19,7 @@ export default function Hero() {
     };
 
     return (
-        <section className="flex flex-col gap- ">
+        <section className="flex flex-col gap- mx-auto mb-4">
             <div className="flex flex-row gap-2">
                 <motion.section
                     variants={variants}
@@ -40,7 +40,7 @@ export default function Hero() {
                             className="rounded-xl"
                         />
                         <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
-                            made fresh every day
+                            always freshly baked
                         </div>
                     </div>
                 </motion.section>
@@ -68,7 +68,7 @@ export default function Hero() {
                     </div>
                 </motion.section>
             </div>
-            <section className="bg-custom8008-caret-color w-1/2 rounded-xl mx-auto text-black">
+            <section className=" bg-custom8008-caret-color w-1/2 rounded-xl mx-auto text-black">
                 <div className="flex flex-row text-justify items-center justify-center">
                     <AnimatePresence>
                         {text1.split("").map((char, i) => (
@@ -104,6 +104,7 @@ export default function Hero() {
                     </AnimatePresence>
                 </div>
             </section>
+            
         </section>
     );
 }

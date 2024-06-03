@@ -27,10 +27,10 @@ export default function RootLayout({
                         </section>
                         <div className="flex-1 flex flex-col sm:flex-row ">
                             <div className="flex-1 ">{children}</div>
-                            <nav className="order-first w-1/4 md:w-1/12 border bg-custom8008-main-color rounded-lg self-center md:self-auto">
+                            <nav className="order-first w-1/4 md:w-[12%] border bg-custom8008-main-color rounded-lg self-center md:self-auto">
                                 <Nav />
                             </nav>
-                            <aside className="w-1/12 border border-green-400 rounded-lg">
+                            <aside className="w-1/4 md:w-[12%] border border-green-400 rounded-lg">
                                 <Sidebar />
                             </aside>
                         </div>
