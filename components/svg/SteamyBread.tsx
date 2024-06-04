@@ -22,6 +22,7 @@ const SteamyBread = ({ ...props }) => {
                 initial="hidden"
             >
                 <motion.path
+                    style={{ pathLength: scrollYProgress }}
                     className="stroke-black"
                     strokeWidth="3"
                     strokeLinecap="round"

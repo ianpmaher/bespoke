@@ -21,7 +21,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className="bread-pattern bg-fixed scroll-smooth ">
-                    <main id="mainmain" className="max-w-[100vw] my-0 mx-auto bg-">
+                    <main id="mainmain" className="max-w-[100vw] my-0 mx-auto ">
                         <section className="pb-2 mb-2 flex justify-center">
                             <Header />
                         </section>

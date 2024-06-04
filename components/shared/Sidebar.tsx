@@ -26,7 +26,7 @@ export default function Sidebar() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 1000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, [images.length]);
