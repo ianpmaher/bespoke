@@ -37,7 +37,7 @@ const ScrollYDiv = ({ className }
     };
 
     return (
-        <motion.div style={{ ...progressStyle }} >
+        <motion.div style={{ scaleX: scrollYProgress }} className="fixed top-0 left-0 right-1 h-[10px] w-screen bg-custom8008-colorful-error-color rounded-md origin-top-left z-[100] " >
             {/* {children} */}
         </motion.div>
     );
