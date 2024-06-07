@@ -26,13 +26,13 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         <div className="w-full h-full flex gap-4 static">
             <button onClick={handlePrev} className="text-2xl">⬅️</button>
             <Card variant="pictures">
-                <Image src={images[previousImageIndex]} alt="Previous Carousel Image" width={150} height={150} className="rounded-xl" />
+                <Image src={images[previousImageIndex]} alt="Previous Carousel Image" width={150} height={150} className="rounded-xl" priority />
             </Card>
             <Card variant="pictures">
-                <Image src={images[currentImageIndex]} alt="Carousel Image" width={300} height={300} className="rounded-xl" />
+                <Image src={images[currentImageIndex]} alt="Carousel Image" width={300} height={300} className="rounded-xl" priority />
             </Card>
             <Card variant="pictures">
-                <Image src={images[nextImageIndex]} alt="Next Carousel Image" width={150} height={150} className="rounded-xl" />
+                <Image src={images[nextImageIndex]} alt="Next Carousel Image" width={150} height={150} className="rounded-xl" priority />
             </Card>
             <button onClick={handleNext} className="text-2xl">➡️</button>
         </div>
