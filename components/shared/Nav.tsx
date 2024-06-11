@@ -9,7 +9,7 @@ import SteamyCoffee from "../svg/SteamyCoffee";
 function Nav() {
     return (
         <div className="fixed flex flex-col items-center justify-center">
-            <menu className=" text-black flex flex-col text-center text-md md:text-md mx-auto my-0 gap-2 justify-center overflow-clip whitespace-break-spaces bg-custom8008-main-color w-fit">
+            <menu className=" text-black flex flex-col text-center text-md md:text-md mx-auto my-0 gap-2 justify-center overflow-clip whitespace-break-spaces  w-fit">
                 <p className="block hover:underline cursor-pointer">Products</p>
                 <p className="block hover:underline cursor-pointer">About Us</p>
                 <p className="block hover:underline cursor-pointer">Commission a Cake</p>
