@@ -20,14 +20,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="bread-pattern bg-fixed scroll-smooth ">
+                <div className=" bg-modernDolchLight-bg-color bg-fixed scroll-smooth ">
                     <main id="mainmain" className="max-w-[100vw] my-0 mx-auto ">
                         <section className="pb-2 mb-2 flex justify-center">
                             <Header />
                         </section>
                         <div className="flex-1 flex flex-col sm:flex-row ">
                             <div className="flex-1 ">{children}</div>
-                            <nav className="order-first w-1/4 md:w-[12%] border bg-custom8008-main-color rounded-lg self-center md:self-auto">
+                            <nav className="order-first w-1/4 md:w-[12%] border bg-modernDolchLight-caret-color rounded-lg self-center md:self-auto">
                                 <Nav />
                             </nav>
                             <aside className="w-1/4 md:w-[12%] border border-green-400 rounded-lg">

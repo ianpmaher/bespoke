@@ -68,7 +68,7 @@ export default function Hero() {
                     </div>
                 </motion.section>
             </div>
-            <section className=" bg-custom8008-caret-color w-1/2 rounded-xl mx-auto text-black">
+            <section className=" bg-modernDolchLight-caret-color w-1/2 rounded-xl mx-auto text-black">
                 <div className="flex flex-row text-justify items-center justify-center">
                     <AnimatePresence>
                         {text1.split("").map((char, i) => (
