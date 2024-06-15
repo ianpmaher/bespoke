@@ -3,8 +3,6 @@
 // import { useState, useEffect } from "react";
 // import { useAnimate, stagger, motion } from "framer-motion";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import SteamyBread from "../svg/SteamyBread";
-import SteamyCoffee from "../svg/SteamyCoffee";
 
 function Nav() {
     return (
@@ -15,10 +13,6 @@ function Nav() {
                 <p className="block hover:underline cursor-pointer">Commission a Cake</p>
                 <p className="block hover:underline cursor-pointer">Contact Us</p>
             </menu>
-            <div className="flex flex-col self-start justify-center">
-                <SteamyBread />
-                <SteamyCoffee />
-            </div>
             {/* <Menu>
                 <MenuButton className="mx-auto my-0 text-center p-1 rounded-xl">
                     <svg

@@ -7,7 +7,11 @@ import SteamyCoffee from "../svg/SteamyCoffee";
 
 function Header() {
     return (
-        <header className="flex flex-col justify-center items-center md:relative bg-modernDolchLight-main-color w-3/4 sm:min-h-20 text-black p-2 rounded-2xl">
+        <header className="fixed flex flex-row justify-center items-center md:z-50 bg-modernDolchLight-main-color w-3/4 sm:min-h-30 text-black p-2 rounded-2xl">
+            <div className="flex items-center justify-evenly md:w-1/4">
+                <SteamyBread />
+                <SteamyCoffee />
+            </div>
             <h1 className="text-3xl md:text-4xl">Bespoke Bakery</h1>
             <div className="flex items-center justify-evenly md:w-1/4">
                 <h3 className="text-md md:text-xl">leaven | local</h3>

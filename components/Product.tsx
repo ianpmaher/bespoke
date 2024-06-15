@@ -16,7 +16,7 @@ interface Photo {
 
 const Product = () => {
     // State to store the data
-        const [albums, setAlbums] = useState<{ [key: number]: Photo[] }>({});
+    const [albums, setAlbums] = useState<{ [key: number]: Photo[] }>({});
 
     // fetch data and set the state
     useEffect(() => {
@@ -26,13 +26,29 @@ const Product = () => {
     return (
         <div className="text-center ">
             {Object.keys(albums).map((albumId) => (
-                <div className="flex justify-center mx-auto my-0" key={albumId}>
+                <div className="mx-auto my-0" key={albumId}>
                     {/* <h2>{albumId}</h2> */}
-                    <div className="grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-2 justify-items-center content-center place-content-evenly p-0 ">
-                        {albums[parseInt(albumId)].map((photo) => (
-                            <div key={photo.id} className="max-w-96 flex flex-col justify-start items-center hover:z-50 z-10 shadow-lg bg-custom8008-sub-color bg-opacity-100 w-1/2 rounded-sm p-1 object-contain">
-                                <Image src={photo.thumbnailUrl} alt={photo.title} width={150} height={150} loading="lazy" />
-                                <p className="text-xs text-pretty md:text-md">{photo.title}</p>
+                    <div className="columns-3 gap-4">
+                        {[24, 32, 36, 32, 32, 32, 16, 16, 64].map((height, index) => (
+                            <div
+                                key={index}
+                                className={`mb-4 h-${height} break-inside-avoid rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900`}
+                            >
+                                {albums[parseInt(albumId)].map((photo) => (
+                                    <div
+                                        key={photo.id}
+                                        className="max-w-96 flex flex-col justify-start items-center hover:z-50 z-10 shadow-lg bg-custom8008-sub-color bg-opacity-100 w-1/2 rounded-sm p-1 object-contain"
+                                    >
+                                        <Image
+                                            src={photo.thumbnailUrl}
+                                            alt={photo.title}
+                                            width={150}
+                                            height={150}
+                                            loading="lazy"
+                                        />
+                                        <p className="text-xs text-pretty md:text-md">{photo.title}</p>
+                                    </div>
+                                ))}
                             </div>
                         ))}
                     </div>
