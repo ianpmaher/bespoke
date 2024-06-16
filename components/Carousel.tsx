@@ -23,7 +23,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     const nextImageIndex = (currentImageIndex + 1) % images.length;
 
     return (
-        <div className="w-full h-full flex gap-4 static">
+        <div className="w-full h-full flex gap-2 static">
             <button onClick={handlePrev} className="text-2xl">⬅️</button>
             <Card variant="pictures">
                 <Image src={images[previousImageIndex]} alt="Previous Carousel Image" width={150} height={150} className="rounded-xl" priority />

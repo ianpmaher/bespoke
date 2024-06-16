@@ -5,19 +5,21 @@ import Image from "next/image";
 import ScrollYDiv from "@/components/ScrollDiv";
 
 export default function Home() {
-
     return (
-        <main className="flex min-h-screen flex-col items-center gap-2 ">
-            <article className="h-screen">
+        <main className="grid grid-cols-12 gap-4 mt-64">
+            <div className=" col-span-12 md:col-span-6 lg:col-span-3 rounded-lg shadow-md p-4">
                 <Hero />
-            </article>
-            <article className="h-screen">
+            </div>
+            <div className="col-span-12 md:col-span-6 lg:col-span-3  rounded-lg shadow-md p-4">
                 <ContentContainer />
-            </article>
-            <article>
+            </div>
+            <div className="col-span-12 md:col-span-6 lg:col-span-3  rounded-lg shadow-md p-4">
                 <Product />
-            </article>
-            <div>
+            </div>
+            <div className="col-span-12 md:col-span-6 lg:col-span-3  rounded-lg shadow-md p-4">
+                <p>Content for Box 4</p>
+            </div>
+            <div className="">
                 <ScrollYDiv className="fixed" />
             </div>
         </main>

@@ -21,19 +21,12 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className=" bg-modernDolchLight-caret-color bg-fixed scroll-smooth ">
-                    <main id="mainmain" className="max-w-[100vw] my-0 mx-auto ">
-                        <section className="pb-2 mb-20 flex justify-center z-50">
+                    <main id="mainmain" className="max-w-[100vw] my-0 mx-auto min-h-screen p-1 ">
+                        <section className="fixed left-1 right-1 top-0 z-50 mx-auto my-0 w-1/2">
                             <Header />
                         </section>
-                        <div className="flex-1 flex flex-col gap-2 sm:flex-row ">
-                            <div className="flex-1 bg-modernDolchLight-bg-color ">{children}</div>
-                            <nav className="order-first w-1/4 md:w-[12%] border bg-modernDolchLight-error-color rounded-lg self-center md:self-auto">
-                                <Nav />
-                            </nav>
-                            <aside className="w-1/4 md:w-[12%] rounded-lg">
-                                <Sidebar />
-                            </aside>
-                        </div>
+
+                        <div className="mt-4">{children}</div>
                     </main>
                 </div>
             </body>
