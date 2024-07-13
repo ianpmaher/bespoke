@@ -2,7 +2,7 @@ import Card from "./Card";
 
 export default function Contacts() {
     return (
-        <div className="md:absolute top-4 right-2 flex flex-col items-center justify-center">
+        <div className="md: top-4 right-2 flex flex-col items-center justify-center">
             <h1 className="text-2xl">Contact Us</h1>
             <div className="flex flex-row items-center justify-center gap-2">
                 <Card variant="primary" className="w-8 h-8 object-contain">

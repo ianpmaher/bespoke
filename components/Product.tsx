@@ -26,7 +26,7 @@ const Product = () => {
     return (
         <div className="text-center ">
             {Object.keys(albums).map((albumId) => (
-                <div className="mx-auto my-0" key={albumId}>
+                <div className="mx-auto my-0 flex" key={albumId}>
                     {/* <h2>{albumId}</h2> */}
 
                     {albums[parseInt(albumId)].map((photo) => (

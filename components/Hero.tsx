@@ -19,8 +19,8 @@ export default function Hero() {
     };
 
     return (
-        <section className="flex flex-col gap- mx-auto mt-20 mb-4 z-0">
-            <div className="flex flex-row gap-2">
+        <section className="flex flex-col justify-center items- gap- mx-auto mt-1 mb-0 z-0">
+            <div className="flex flex-row gap-1 justify-center items-center">
                 <motion.section
                     variants={variants}
                     initial="hidden"
@@ -39,7 +39,7 @@ export default function Hero() {
                             priority
                             className="rounded-xl"
                         />
-                        <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-auto flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
+                        <div className="rounded-xl opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-auto flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
                             always freshly baked
                         </div>
                     </div>
@@ -62,13 +62,13 @@ export default function Hero() {
                             priority
                             className="rounded-xl"
                         />
-                        <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-auto flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
+                        <div className="rounded-xl opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-auto flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
                             artisanal grains
                         </div>
                     </div>
                 </motion.section>
             </div>
-            <section className=" bg-modernDolchLight-caret-color w-1/2 rounded-xl my-0 mx-auto text-black">
+            <section className=" bg-modernDolchLight-caret-color w-1/4 h-1/4 rounded-xl my-0 mx-auto text-black">
                 <div className="flex flex-row h-10 text-justify items-center justify-center">
                     <AnimatePresence>
                         {text1.split("").map((char, i) => (
@@ -104,13 +104,13 @@ export default function Hero() {
                     </AnimatePresence>
                 </div>
             </section>
-            <div className="flex flex-row gap-1">
+            <div className="flex flex-row justify-center">
                 <motion.section
                     variants={variants}
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 2, ease: "easeInOut" }}
-                    className="w-1/2 h-1/2"
+                    className="w-1/2 h-1/2 mt-[-4rem]"
                 >
                     <div className="relative">
                         <Image
@@ -121,9 +121,9 @@ export default function Hero() {
                             height={200}
                             alt="dough"
                             priority
-                            className="rounded-xl"
+                            className="rounded-xl scale-75"
                         />
-                        <div className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
+                        <div className="rounded-xl scale-75 opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center bg-black bg-opacity-70 text-3xl text-white font-semibold">
                             artisans at work
                         </div>
                     </div>

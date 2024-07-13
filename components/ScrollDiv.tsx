@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 export const ScrollDiv = ({ children }
     : {
@@ -22,6 +22,8 @@ const ScrollYDiv = ({ className }
     }
 ) => {
     const { scrollYProgress } = useScroll();
+    // useSpring(scrollYProgress, { stiffness: 400, damping: 90 });
+    const scale = useSpring(scrollYProgress, { stiffness: 400, damping: 90 });
     const progressStyle = {
         position: "fixed",
         top: 0,
@@ -37,7 +39,7 @@ const ScrollYDiv = ({ className }
     };
 
     return (
-        <motion.div style={{ scaleX: scrollYProgress }} className="fixed top-0 left-0 right-1 h-[10px] w-screen bg-custom8008-colorful-error-color rounded-md origin-top-left z-[100] " >
+        <motion.div style={{ scaleY: scale }} className="fixed top-0 left-0 right-1 h-full w-[20px] bg-custom8008-error-color rounded-md origin-top-left z-[100] " >
             {/* {children} */}
         </motion.div>
     );

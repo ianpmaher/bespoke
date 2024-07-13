@@ -6,21 +6,28 @@ import ScrollYDiv from "@/components/ScrollDiv";
 
 export default function Home() {
     return (
-        <main className="grid grid-cols-10 gap-2 mt-64 w-full">
-            <div className=" col-span-8 md:col-span-6 lg:col-span-3 rounded-lg shadow-md p-1">
-                <Hero />
-            </div>
-            <div className="col-span-8 md:col-span-6 lg:col-span-3  rounded-lg shadow-md p-1">
-                <ContentContainer />
-            </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-3  rounded-lg shadow-md p-1">
-                <Product />
-            </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-3  rounded-lg shadow-md p-1">
-                <p>Content for Box 4</p>
-            </div>
-            <div className="">
-                <ScrollYDiv className="fixed" />
+        <main className="flex flex-col py-32 w-full">
+            <section className="flex flex-row h-full w-full justify-between items-center">
+                <div className="flex rounded-lg shadow-md mx-auto">
+                    <Hero />
+                </div>
+                <div className="  rounded-lg shadow-md mx-auto">
+                    <ContentContainer />
+                </div>
+            </section>
+            <section className="flex flex-row justify-between text-center my-4">
+                <div className="  rounded-lg shadow-md p-1">
+                    <p>Content for Box 3</p>
+                </div>
+                <div className="  rounded-lg shadow-md p-1">
+                    <Product />
+                </div>
+                <div className="  rounded-lg shadow-md p-1">
+                    <p>Content for Box 4</p>
+                </div>
+            </section>
+            <div className="absolute">
+                <ScrollYDiv className="absolute" />
             </div>
         </main>
     );

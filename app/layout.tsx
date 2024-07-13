@@ -20,13 +20,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className=" bg-modernDolchLight-caret-color bg-fixed scroll-smooth ">
-                    <main id="mainmain" className="max-w-[100vw] my-0 mx-auto min-h-screen p-1 ">
-                        <section className="fixed left-1 right-1 top-0 z-50 mx-auto my-0 w-1/2">
+                
+                <div className=" bg-modernDolchLight-caret-color bg-fixed scroll-smooth "> 
+                    <main id="mainmain" className=" my-0 mx-auto min-h-screen p- ">
+                        <section className="fixed left-1 right-1 top-0 z-50 mx-auto my-0 w-1/2"> {/* if scroll to animate the bread, this must be fixed*/}
                             <Header />
                         </section>
 
-                        <div className="mt-4">{children}</div>
+                        <div className="">{children}</div>
                     </main>
                 </div>
             </body>
